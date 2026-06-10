@@ -1,0 +1,4 @@
+timestamp,processed_file,latency_seconds,quality_gate_passed,garment_detected,blur_metric,brightness_metric
+2026-06-11 01:26:27,human.jpg,1.0719,False,False,65.44,237.43
+2026-06-11 01:27:40,human.jpg,0.9247,False,False,65.44,237.43
+2026-06-11 01:32:13,human.jpg,0.3834,False,False,65.44,237.43
