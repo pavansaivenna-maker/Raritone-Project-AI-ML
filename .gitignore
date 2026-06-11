@@ -1,6 +1,26 @@
-venv/
+# Python bytecode caches (generated automatically during runtime)
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
+.pytest_cache/
+
+# Development Environment settings (VS Code & PyCharm configurations)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System temporary files
+.DS_Store
+Thumbs.db
+
+# Virtual Environments (if you or teammates use localized setups)
+venv/
+.venv/
+env/
+
+# Matplotlib & Machine Learning run outputs (prevents local image dumps)
+*.png
+*.jpeg
+*.jpg
