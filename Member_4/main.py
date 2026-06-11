@@ -13,8 +13,11 @@ from validation_engine import GarmentValidationEngine
 # ==========================================
 # 📊 INTERNAL ANALYTICS LOGGER FUNCTIONALITY
 # ==========================================
-# Sets the path for your validation log database spreadsheet
-LOG_FILE_PATH = os.path.join(os.path.dirname(__file__), "garment_validation_analytics.csv")
+# 1. Ensure the dataset directory exists locally so the app doesn't crash
+os.makedirs(os.path.join(os.path.dirname(__file__), "dataset"), exist_ok=True)
+
+# 2. Sets the clean cross-platform path for your analytics file inside the folder
+LOG_FILE_PATH = os.path.join(os.path.dirname(__file__), "dataset", "garment_validation_analytics.csv")
 
 def log_validation_metrics(filename: str, objects_detected: int, status: str):
     """

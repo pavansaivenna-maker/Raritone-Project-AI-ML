@@ -11,14 +11,38 @@ This repository contains the standalone AI validation microservice for **Member 
 ---
 
 ## 🏗️ System Architecture & Data Flow
-The microservice functions as an isolated validation gatekeepers hub positioned at the repository root level:
-[Raw Product Image] ──> [Member 4: FastAPI Gateway]
+The microservice has been fully optimized to centralize data storage and telemetry logs into a unified directory structure:
+
+```text
+Member_4/
 │
-├──> [YOLOv8 Inference Check] ──> Bounding Box Extractor
-├──> [Quality Guardrail Logic] ──> Filter Empty/Blurry Noise
-└──> [Pandas Logger Engine] ──> Append to CSV Database
+├── 📁 dataset/                             <-- Centralized Data Store
+│   ├── garment_validation_analytics.csv    <-- Auto-generated AI Run Logs
+│   └── [Backend Team Schema CSVs]          <-- Auth, Inventory, Products, etc.
+│
+├── 📄 main.py                              <-- FastAPI Application & Routing
+├── 📄 validation_engine.py                 <-- YOLOv8 Core Detection Object
+└── 📄 yolov8n.pt                           <-- Neural Network Weight Matrix
 
 ---
+
+🚀 How to Run and Test the Microservice
+Step 1: Initialize the Local API Server
+Ensure your virtual environment is active, navigate to the directory, and boot up the FastAPI Uvicorn engine:
+
+PowerShell
+cd P:\AI_ML_Internship\Fashion-AI\Member_4
+uvicorn main:app --reload --port 8000
+Step 2: Access the Interactive Docs Layout
+Open your web browser and navigate to:
+👉 http://127.0.0.1:8000/docs
+
+Step 3: Run the Ingestion & Analytics Tests
+Expand the POST /validate-image/ route block.
+
+Click "Try it out", upload a sample clothing image file, and press "Execute".
+
+The system will process the image coordinates and instantly append the execution row matrix directly inside your local database path: dataset/garment_validation_analytics.csv.
 
 ## 🌐 API Specifications & Integration Mapping
 

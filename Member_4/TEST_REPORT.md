@@ -1,9 +1,3 @@
----
-
-### **2. Create `TEST_REPORT.md` (The Verification Proof)**
-Industry-grade submissions require proof of validation testing. Create this file to demonstrate how your code safely handles edge cases:
-
-```markdown
 # Automated Microservice Validation Testing Report
 
 ## 📊 Evaluation Test Suite Results
@@ -17,8 +11,22 @@ To ensure operational stability and clean exception handling, the API endpoints 
 | **03: Invalid Format Upload** | Text files or corrupted `.txt`/`.pdf` extensions | Blocks stream ingestion early; returns standard `400 Bad Request` HTTP error | **PASSED** |
 
 ## 📈 Analytics Ingestion Verification
-Every execution run appends structured metrics directly into `garment_validation_analytics.csv` using the designated `lp` pandas tracking pipeline. The schema captures:
+Every execution run appends structured metrics directly into the centralized ledger using the designated `lp` pandas tracking pipeline. The schema captures:
 1. `timestamp`: High-precision date-time string.
 2. `file_name`: Uploaded source file tracker.
 3. `garments_found`: Quantitative integer tally of localized models.
-4. `validation_status`: Final functional boolean outcome flag (`PASSED`/`FAILED`).
+4. `validation_status`: Final functional outcome flag (`PASSED`/`FAILED`).
+
+---
+
+## 🧪 Automated Integration Run Verification
+
+The logging pipeline has been verified using the unified dataset tracking configuration. Below is an active execution record extracted from the automated ledger:
+
+### Telemetry Ledger Schema Location: 
+`Member_4/dataset/garment_validation_analytics.csv`
+
+### Verified Log Entry:
+```csv
+timestamp,file_name,garments_found,validation_status
+2026-06-11 15:38:06,shirt.png,0,FAILED
