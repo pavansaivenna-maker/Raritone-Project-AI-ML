@@ -1,147 +1,68 @@
-# 📊 RARITONE – AI Demand Intelligence System
+# Raritone AI Demand & Financial Intelligence Platform
 
-## 📌 Project Overview
-
-RARITONE is an AI-powered demand forecasting system built using Facebook Prophet to analyze **RARITONE’s official dataset (CSV-based)** and generate intelligent business insights.
-
-It is designed for real-world integration with the RARITONE backend dataset to support:
-
-- 📈 Demand Forecasting
-- 📦 Inventory Optimization
-- 📊 Trend & Seasonality Analysis
+An enterprise-grade, decentralized network of machine learning microservices engineered to provide predictive retail analytics. Utilizing **FastAPI** for high-performance API routing and **Facebook Prophet** for time-series forecasting, this platform transforms raw historical transaction logs into actionable inventory buffers, automated manufacturing replenishment flags, and 6-month macro revenue trajectories.
 
 ---
 
-# 🧠 What I Built
+##  1. Data Architecture & Relational Schema
 
-This system consists of **3 independent forecasting modules**, each working on the same RARITONE dataset but producing different business insights.
+The forecasting pipeline aggregates data from three foundational relational structures located within the local `/datasets` directory. The engines automatically execute internal relational joins (`inner merges`) using shared primary keys to map transactions to their specific apparel category profiles.
 
----
+### Directory Blueprint  
 
-# 📁 Dataset Information (IMPORTANT)
+```text
+Member_2/
+├── datasets/
+│   ├── order.csv                # Core Transaction Ledger
+│   ├── product.csv              # Product Catalog & Live Stock Index
+│   └── category.csv             # Operational Taxonomy Hierarchy
+├── inventoryForecast.py         # App 1: Daily Units Operations (Port 8000)
+├── productDemand.py             # App 2: 6-Month Units Projection (Port 8001)
+├── trendForecasting.py          # App 3: 6-Month Financial Trajectory (Port 8002)
+├── requirements.txt             # Consolidated system dependencies
 
-## ⚠️ Official Dataset Used
 
-All modules use:
+### Relational Entity Layout
 
-👉 **RARITONE Dataset (CSV file provided by backend system)**
+[order.csv]                    [product.csv]                  [category.csv]
++---------------+              +---------------+              +---------------+
+| id            |              | id            |              | id            |
+| product_id    | <----------> | name          |              | name          |
+| quantity      |              | price         |              | status        |
+| status        |              | stock         | <----------> |               |
+| created_at    |              | category_id   |              |               |
++---------------+              +---------------+              +---------------+
 
-### Required Dataset Structure:
 
-- A valid **Date column** (Order Date or equivalent)
-- A valid **numeric column** (Sales or Quantity)
-- Cleaned and preprocessed data (no null values)
+### The Three Predictive AI Engines
 
----
+To optimize performance and isolate runtime parameters, the platform splits its features into three standalone Python microservices. They run completely independently on separate network ports.
 
-## 🧹 Dataset Rule
+🔹 App 1: Daily Operations Forecasting (inventoryForecast.py)
+Core Focus: Short-Term Micro-Fulfillment & Warehouse Inventory Health.
 
-Before processing:
+Network Port: 8000
 
-- Date must be converted using `pd.to_datetime()`
-- Numeric column must be converted using `pd.to_numeric()`
-- Missing values must be removed
+Timeline Interval: Daily (D frequency granularity)
 
----
+Description: Monitors immediate transactional patterns to predict sales over an upcoming 14-day window. It aggregates daily sales, clips negative bounds to 0, compares projected requirements against active warehouse stock, and outputs an automated supply chain alert (Warehouse Levels Healthy or Trigger Production Replenishment Run).
 
-# 📦 1. inventoryForecast.py
+🔹 App 2: 6-Month Product Demand Strategic Engine (productDemand.py)
+Core Focus: Mid-to-Long Range Manufacturing Run Allocation.
 
-## 🎯 Purpose
-Product-level demand forecasting + inventory optimization using RARITONE dataset.
+Network Port: 8001
 
-## 💡 What it does
-- Filters product-level data from RARITONE dataset
-- Aggregates time-series demand
-- Applies Prophet forecasting model
-- Generates:
-  - Future demand prediction
-  - Inventory requirement
-  - Reorder quantity
-  - Growth trend analysis
+Timeline Interval: Month-End (ME frequency granularity)
 
-## 📊 Output
-- 6-month product demand forecast
-- Inventory recommendation system
-- Market trend classification
-- Visualization dashboard
+Description: Built for production planners. It analyzes macro-level demand signals by grouping units over long monthly buckets. This smooths out short-term noise to project volume requirements across a 6-month outlook horizon.
 
----
+🔹 App 3: 6-Month Financial & Revenue Trajectory Engine (trendForecasting.py)
+Core Focus: Gross Revenue, Financial Planning, and Budget Forecasting.
 
-# 📊 2. productDemand.py
+Network Port: 8002
 
-## 🎯 Purpose
-Forecasts **overall demand using RARITONE dataset (no filtering)**.
+Timeline Interval: Month-End (ME frequency granularity)
 
-## 💡 What it does
-- Uses complete RARITONE dataset
-- Aggregates total sales over time
-- Applies Prophet forecasting
-- Predicts next 6 months demand
+Description: Swaps volume tracking for currency tracking. It multiplies order quantities by individual unit costs to map historical revenue trends. It generates a 6-month forecast of incoming revenue stream values (in ₹ Rupees), paired with a breakdown of annual sales seasonality patterns.
 
-## 📊 Output
-- Demand forecast report
-- Expected / min / max demand
-- Trend visualization graph
-
----
-
-# 📈 3. trendForecasting.py
-
-## 🎯 Purpose
-Analyzes **demand trends and seasonality patterns from RARITONE dataset**.
-
-## 💡 What it does
-- Uses same RARITONE dataset as productDemand module
-- Focuses on:
-  - Long-term trend direction
-  - Seasonal variations
-  - Demand behavior over time
-- Generates advanced visualization insights
-
-## 📊 Output
-- Trend analysis graph
-- Seasonality insights
-- Demand behavior interpretation
-
----
-
-# 📌 Key System Features
-
-✔ Works on RARITONE official dataset  
-✔ Modular architecture (3 independent ML pipelines)  
-✔ Time-series forecasting using Prophet  
-✔ Inventory optimization logic  
-✔ Business insight generation  
-✔ Trend and seasonality analysis  
-
----
-
-# 📁 Dataset Dependency
-
-All modules depend on:
-
-👉 **RARITONE CSV Dataset (provided by backend team)**
-
-### Required fields:
-- Date column (Order Date or equivalent)
-- Numeric column (Sales or Quantity)
-
----
-
-# 🚀 Business Value
-
-This system enables RARITONE to:
-
-- Predict future product demand
-- Optimize inventory levels
-- Reduce overstocking & shortages
-- Understand seasonal demand patterns
-- Improve business decision-making using AI
-
----
-
-# 📌 Conclusion
-
-This project is fully integrated with the **RARITONE dataset pipeline** and is designed for real-world backend deployment where dataset structure may vary but logic remains stable and modular.
-
----
+DO READ DEPLOYMENT DETAILS AND REQUIREMENTS

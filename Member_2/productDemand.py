@@ -1,91 +1,268 @@
+import io
+import os
+import math
+from enum import Enum
 import pandas as pd
 from prophet import Prophet
+import matplotlib
+# Forces matplotlib to use a non-interactive backend suited for web servers
+matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
+from fastapi import FastAPI, Query, HTTPException, Response
+from pydantic import BaseModel
+from typing import List
 
-sales = pd.read_csv("Sample - Superstore.csv", encoding="latin1")
+# -------------------------------------------------------------------------
+# NATIVE FASHION CATEGORY ENUM SELECTION
+# -------------------------------------------------------------------------
+class FashionCategory(str, Enum):
+    KURTIS = "Kurtis"
+    SAREES = "Sarees"
+    JEANS = "Jeans"
+    SHIRTS = "Shirts"
+    TSHIRTS = "T-Shirts"
+    HOODIES = "Hoodies"
+    JACKETS = "Jackets"
+    DRESSES = "Dresses"
+    ETHNIC_WEAR = "Ethnic Wear"
+    FOOTWEAR = "Footwear"
 
-print("Raritone AI Demand Intelligence System Activated")
-print("Dataset Loaded:", sales.shape)
+# -------------------------------------------------------------------------
+# PYDANTIC SCHEMAS (Matches clean Swagger structural expectations)
+# -------------------------------------------------------------------------
+class CategoryOverview(BaseModel):
+    category_analyzed: str
+    latest_recorded_demand: float
+    projected_next_period_demand: int
+    expected_growth_percentage: float
+    market_trend: str
 
-sales["Order Date"] = pd.to_datetime(sales["Order Date"], errors="coerce")
-sales["Sales"] = pd.to_numeric(sales["Sales"], errors="coerce")
+class InventoryHealth(BaseModel):
+    live_warehouse_stock: int
+    recommended_stock_level: int
+    safety_buffer: int
+    suggested_replenishment: int
+    inventory_status: str
 
-sales = sales.dropna(subset=["Order Date", "Sales"])
+class DemandOutlookRow(BaseModel):
+    date: str
+    projected_demand: float
+    minimum_expected_demand: float
+    maximum_expected_demand: float
 
-monthly_sales = (
-    sales
-    .groupby(pd.Grouper(key="Order Date", freq="ME"))["Sales"]
-    .sum()
-    .reset_index()
+class AnalyticsResponse(BaseModel):
+    category_performance: CategoryOverview
+    ai_tryon_business_insight: str
+    inventory_health: InventoryHealth
+    predictive_demand_outlook: List[DemandOutlookRow]
+
+# -------------------------------------------------------------------------
+# FASTAPI APP INITIALIZATION (Running independently on separate port)
+# -------------------------------------------------------------------------
+app = FastAPI(
+    title="Raritone AI Demand Intelligence System",
+    description="### Macro-Level 6-Month Apparel Demand Forecasting Pipeline (Monthly Aggregations)",
+    version="3.0.0"
 )
 
-forecast_data = monthly_sales.rename(columns={"Order Date": "ds", "Sales": "y"})
+# -------------------------------------------------------------------------
+# RELATIONAL DATA EXTRACTION PIPELINE
+# -------------------------------------------------------------------------
+def get_clean_category_dataframe(category_name: str):
+    """Loads CSV files dynamically from the datasets/ subfolder relative to this script."""
+    CURRENT_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    
+    order_path = os.path.join(CURRENT_SCRIPT_DIR, "datasets", "order.csv")
+    product_path = os.path.join(CURRENT_SCRIPT_DIR, "datasets", "product.csv")
+    category_path = os.path.join(CURRENT_SCRIPT_DIR, "datasets", "category.csv")
+    
+    for f in [order_path, product_path, category_path]:
+        if not os.path.exists(f):
+            raise HTTPException(
+                status_code=500, 
+                detail=f"Configuration breakdown. Missing target infrastructure component at: '{f}'"
+            )
+            
+    orders = pd.read_csv(order_path)
+    products = pd.read_csv(product_path)
+    categories = pd.read_csv(category_path)
 
-model = Prophet(yearly_seasonality=True, weekly_seasonality=False, daily_seasonality=False)
-model.fit(forecast_data)
+    orders = orders.rename(columns={"created_at": "order_date", "status": "order_status"})
+    products = products.rename(columns={"id": "product_id", "name": "product_name", "status": "product_status"})
+    categories = categories.rename(columns={"id": "category_id", "name": "category_name", "status": "category_status"})
 
-future = model.make_future_dataframe(periods=6, freq="ME")
-forecast = model.predict(future)
+    merged = orders.merge(products, on="product_id", how="inner")
+    final_df = merged.merge(categories, on="category_id", how="inner")
+    final_df["order_date"] = pd.to_datetime(final_df["order_date"], dayfirst=True, errors="coerce")
+    
+    segment_df = final_df[final_df["category_name"].str.lower() == category_name.lower()].dropna(subset=["order_date", "quantity"])
+    
+    # Text-fallback keyword routine for disconnected relational keys
+    if segment_df.empty:
+        singular_keyword = category_name[:-1] if category_name.endswith('s') else category_name
+        fallback_df = orders.merge(products, on="product_id", how="inner")
+        fallback_df["order_date"] = pd.to_datetime(fallback_df["order_date"], dayfirst=True, errors="coerce")
+        
+        segment_df = fallback_df[
+            fallback_df["product_name"].str.lower().str.contains(singular_keyword.lower(), na=False)
+        ].dropna(subset=["order_date", "quantity"])
+        
+        segment_df["category_name"] = category_name
+        live_stock = int(products[products["product_name"].str.lower().str.contains(singular_keyword.lower(), na=False)]["stock"].sum())
+    else:
+        target_cat_id = segment_df["category_id"].iloc[0]
+        live_stock = int(products[products["category_id"] == target_cat_id]["stock"].sum())
+        
+    if segment_df.empty or len(segment_df) < 2:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Category structure content '{category_name}' has insufficient timeline depth to map macro trends."
+        )
+        
+    return segment_df, products, live_stock
 
-result = forecast[["ds", "yhat", "yhat_lower", "yhat_upper"]].tail(6).copy()
+def run_fashion_forecasting_engine(category_name: str):
+    """Processes datasets and fits Prophet on Month-End (ME) sequential timeline horizons."""
+    segment_df, raw_products, live_stock = get_clean_category_dataframe(category_name)
 
-result.columns = ["Month", "Expected Demand", "Minimum Demand", "Maximum Demand"]
-result["Month"] = result["Month"].dt.strftime("%B %Y")
+    # 🌟 Aggregating transactions by Month-End (ME frequency matching your specification)
+    monthly_timeline = segment_df.groupby(pd.Grouper(key="order_date", freq="ME"))["quantity"].sum().reset_index().fillna(0)
+    forecast_ready = monthly_timeline.rename(columns={"order_date": "ds", "quantity": "y"})
+    
+    # Establish non-negative mathematical floors
+    forecast_ready['floor'] = 0
+    
+    # Train forecasting engine with customized macro flags
+    model = Prophet(
+        growth='linear',
+        yearly_seasonality=True, 
+        weekly_seasonality=False, 
+        daily_seasonality=False,
+        changepoint_prior_scale=0.05
+    )
+    model.fit(forecast_ready)
 
-result["Expected Demand"] = result["Expected Demand"].round(0).astype(int)
-result["Minimum Demand"] = result["Minimum Demand"].round(0).astype(int)
-result["Maximum Demand"] = result["Maximum Demand"].round(0).astype(int)
+    # Build a 6-month predictive future view frame
+    future = model.make_future_dataframe(periods=6, freq="ME")
+    future['floor'] = 0
+    forecast = model.predict(future)
 
-print("\nRaritone AI Forecast Report: Next 6 Months Demand Outlook\n")
-print(result.to_string(index=False))
+    # Ensure clean non-negative array boundaries
+    for col in ['yhat', 'yhat_lower', 'yhat_upper']:
+        forecast[col] = forecast[col].clip(lower=0)
 
-fig = model.plot(forecast)
-ax = fig.gca()
+    return monthly_timeline, forecast, model, live_stock
 
-fig.set_size_inches(12, 6)
+# -------------------------------------------------------------------------
+# ROUTE ENDPOINTS
+# -------------------------------------------------------------------------
+@app.get("/", include_in_schema=False)
+def root_redirect():
+    return Response(status_code=307, headers={"Location": "/docs"})
 
-fig.suptitle(
-    "Raritone AI Demand Intelligence Dashboard",
-    fontsize=18,
-    fontweight="bold",
-    y=0.96
-)
+@app.get("/api/v1/raritone/analytics/forecast", response_model=AnalyticsResponse, tags=["Fashion Intelligence Data JSON"])
+def get_fashion_demand_forecast(category: FashionCategory = Query(default=FashionCategory.KURTIS)):
+    """Returns 6-month structured numerical data profiles using clean non-negative math bounds."""
+    historical_df, forecast, model, live_stock = run_fashion_forecasting_engine(category.value)
+    future_horizon = forecast[["ds", "yhat", "yhat_lower", "yhat_upper"]].tail(6)
 
-ax.set_title(
-    "Fashion Demand Forecast (Next 6 Months Outlook)",
-    fontsize=14,
-    pad=15
-)
+    # Macro Supply Chain Matrix Calculations
+    raw_next_demand = future_horizon.iloc[0]["yhat"]
+    projected_next_period_demand = math.ceil(raw_next_demand) if raw_next_demand > 0 else 0
+    
+    safety_buffer = 50 # Expanded buffer allocation profile for month-long distribution horizons
+    ideal_stock_allocation = projected_next_period_demand + safety_buffer
+    replenishment_units_needed = max(0, ideal_stock_allocation - live_stock)
 
-ax.set_xlabel("Timeline (Monthly View)", fontsize=12)
-ax.set_ylabel("Expected Customer Demand", fontsize=12)
+    last_recorded_actual = historical_df["quantity"].iloc[-1] if not historical_df.empty else 0
+    
+    if last_recorded_actual == 0:
+        growth_rate = 0.0
+    else:
+        growth_rate = round(((projected_next_period_demand - last_recorded_actual) / last_recorded_actual) * 100, 1)
 
-ax.axvspan(
-    forecast["ds"].iloc[-6],
-    forecast["ds"].iloc[-1],
-    color="orange",
-    alpha=0.15
-)
+    if growth_rate > 0:
+        trend_status = "Accelerating Demand Velocity"
+    elif growth_rate < 0:
+        trend_status = "Decelerating Demand Volatility"
+    else:
+        trend_status = "Stabilized / Plateaued Market"
 
-ax.grid(True, linestyle="--", alpha=0.4)
+    insight = f"Macro demand parameters for {category.value} display clear operational signals over the 6-month window."
+    stock_status = "Trigger Production Replenishment Run" if replenishment_units_needed > 0 else "Warehouse Levels Healthy"
 
-plt.subplots_adjust(top=0.88)
-plt.tight_layout()
+    future_display = future_horizon.copy()
+    future_display["ds"] = future_display["ds"].dt.strftime('%B %Y')
+    outlook_list = [
+        DemandOutlookRow(
+            date=row["ds"], 
+            projected_demand=round(max(0.0, row["yhat"]), 2),
+            minimum_expected_demand=round(max(0.0, row["yhat_lower"]), 2), 
+            maximum_expected_demand=round(max(0.0, row["yhat_upper"]), 2)
+        ) for _, row in future_display.iterrows()
+    ]
 
-plt.show()
+    return AnalyticsResponse(
+        category_performance=CategoryOverview(
+            category_analyzed=category.value, latest_recorded_demand=float(last_recorded_actual),
+            projected_next_period_demand=int(projected_next_period_demand), expected_growth_percentage=growth_rate, market_trend=trend_status
+        ),
+        ai_tryon_business_insight=insight,
+        inventory_health=InventoryHealth(
+            live_warehouse_stock=live_stock, recommended_stock_level=ideal_stock_allocation,
+            safety_buffer=safety_buffer, suggested_replenishment=replenishment_units_needed, inventory_status=stock_status
+        ),
+        predictive_demand_outlook=outlook_list
+    )
 
-fig2 = model.plot_components(forecast)
+@app.get("/api/v1/raritone/visual/dashboard", tags=["Visualizations (Renders Direct Images)"])
+def get_dashboard_chart_rendered(category: FashionCategory = Query(default=FashionCategory.KURTIS)):
+    """Generates the main 6-Month macro forecast dashboard directly to Swagger."""
+    historical_df, forecast, model, _ = run_fashion_forecasting_engine(category.value)
+    
+    plt.style.use("seaborn-v0_8-whitegrid")
+    fig = model.plot(forecast)
+    ax = fig.gca()
+    fig.set_size_inches(12, 6)
 
-for ax in fig2.axes:
-    ax.grid(True, linestyle="--", alpha=0.3)
+    fig.suptitle("Raritone AI Demand Intelligence Dashboard", fontsize=18, fontweight="bold", y=0.96)
+    ax.set_title(f"{category.value.upper()} - Fashion Demand Forecast (Next 6 Months Outlook)", fontsize=13, pad=15)
+    ax.set_xlabel("Timeline (Monthly View)", fontsize=11)
+    ax.set_ylabel("Expected Customer Demand", fontsize=11)
+    ax.set_ylim(bottom=0)
 
-fig2.suptitle(
-    "Raritone AI Demand Drivers (Trend & Seasonality Insights)",
-    fontsize=16,
-    fontweight="bold",
-    y=0.96
-)
+    # Visual highlight area spanning the 6-month prediction look-ahead
+    ax.axvspan(forecast["ds"].iloc[-6], forecast["ds"].iloc[-1], color="orange", alpha=0.15, label="6-Month Outlook Horizon")
+    ax.grid(True, linestyle="--", alpha=0.4)
+    ax.legend(loc="upper left")
+    
+    plt.subplots_adjust(top=0.88)
+    plt.tight_layout()
+    
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png', bbox_inches='tight', dpi=120)
+    plt.close(fig)
+    return Response(content=buf.getvalue(), media_type="image/png")
 
-plt.tight_layout()
-plt.subplots_adjust(top=0.88)
-plt.show()
+@app.get("/api/v1/raritone/visual/drivers", tags=["Visualizations (Renders Direct Images)"])
+def get_drivers_chart_rendered(category: FashionCategory = Query(default=FashionCategory.KURTIS)):
+    """Generates the macro trend and annual seasonality drivers components graph directly to Swagger."""
+    _, forecast, model, _ = run_fashion_forecasting_engine(category.value)
+    
+    fig2 = model.plot_components(forecast)
+    for ax in fig2.axes:
+        ax.grid(True, linestyle="--", alpha=0.3)
+
+    fig2.suptitle("Raritone AI Demand Drivers (Trend & Seasonality Insights)", fontsize=16, fontweight="bold", y=0.96)
+    plt.tight_layout()
+    plt.subplots_adjust(top=0.88)
+    
+    buf = io.BytesIO()
+    fig2.savefig(buf, format='png', bbox_inches='tight', dpi=120)
+    plt.close(fig2)
+    return Response(content=buf.getvalue(), media_type="image/png")
+
+if __name__ == "__main__":
+    import uvicorn
+    # Assigned to dedicated port 8001 so it can run alongside your original apps
+    uvicorn.run("productDemand:app", host="127.0.0.1", port=8001, reload=True)
