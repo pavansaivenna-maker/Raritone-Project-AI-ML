@@ -10,7 +10,7 @@ The forecasting pipeline aggregates data from three foundational relational stru
 
 ### Directory Blueprint  
 
-```text
+
 Member_2/
 ├── datasets/
 │   ├── order.csv                # Core Transaction Ledger
