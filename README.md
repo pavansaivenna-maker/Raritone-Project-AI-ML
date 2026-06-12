@@ -307,9 +307,9 @@ AI/ML Team
 
 AI/ML Team members
 
-V.Pavan sai - Team Lead
-Toka Priyanka - co lead(team 1 ):- Akshith, Pranay , Pranav , Praneetha
-Hansika kota - co lead (team 2 ):- Hasini , Navya , Pranavi
+V.Pavan sai - Team Lead-
+Toka Priyanka - co lead(team 1 ):- Akshith, Pranay , Pranav , Praneetha-
+Hansika kota - co lead (team 2 ):- Hasini , Navya , Pranavi-
 V.Pavan sai -team 3
 ---
 
