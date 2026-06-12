@@ -1,55 +1,66 @@
 # AI Photoshoot Generator
 
 ## Overview
-The AI Photoshoot Generator module is designed to create high-quality fashion and marketing images for e-commerce platforms. It helps generate realistic product photos, fashion model images, lifestyle visuals, and marketing content automatically.
+
+The AI Photoshoot Generator is a content generation module designed for fashion and e-commerce applications. It automatically generates professional-quality images for products, fashion models, lifestyle scenarios, and marketing campaigns.
 
 ## Features
 
 ### Fashion Model Generator
-- Generates AI-based fashion model images
-- Enhances product presentation
+
+* Generates AI-powered fashion model images
+* Improves product presentation
 
 ### Product Photo Generator
-- Creates professional product photos
-- Improves product visualization
+
+* Creates professional product showcase images
+* Enhances catalog quality
 
 ### Lifestyle Image Generator
-- Generates lifestyle-based product images
-- Simulates real-world usage scenarios
+
+* Produces realistic lifestyle-based product visuals
+* Simulates real-world usage scenarios
 
 ### Marketing Image Generator
-- Creates promotional and marketing visuals
-- Supports banner and advertisement generation
+
+* Generates promotional and advertising visuals
+* Supports marketing campaigns and banners
 
 ## Project Structure
 
-```
 phase5_ai_photoshoot_generator/
 
-├── fashion_model_generator.py
-├── product_photo_generator.py
-├── lifestyle_image_generator.py
-├── marketing_image_generator.py
-```
+* fashion_model_generator.py
+* product_photo_generator.py
+* lifestyle_image_generator.py
+* marketing_image_generator.py
+* api.py
+* test_generators.py
 
 ## Input
-- Product Images
-- Product Information
-- Style Preferences (Optional)
+
+* Product Images
+* Product Information
+* Style Preferences (Optional)
 
 ## Output
-- AI Fashion Model Images
-- Product Photoshoot Images
-- Lifestyle Images
-- Marketing & Promotional Visuals
+
+* Fashion Model Images
+* Product Photoshoot Images
+* Lifestyle Images
+* Marketing Visuals
 
 ## Technologies Used
-- Python
-- AI/ML Models
-- Image Processing Libraries
+
+* Python
+* Artificial Intelligence
+* Machine Learning
+* Image Processing
 
 ## Status
-Completed and tested successfully.
+
+Completed and Tested Successfully.
 
 ## Team
-AI Content Generation Team – Phase 5
+
+AI Content Generation Team (Phase 5)
