@@ -1,0 +1,101 @@
+vendor_id,vendor_name,email,phone,address,vendor_status,gst_number,kyc_document,is_verified,created_at,updated_at
+1,Pantaloons 1,elizabethwu@example.net,3864766760,"2908 Horn Well Suite 304 East Paul, FM 53422",Active,GST219041,vendor_1.pdf,TRUE,08-05-2026 13:12,14-05-2026 18:14
+2,W 2,joseph34@example.com,5008394479,"57993 Greene Isle Suite 028 Silvafort, CT 26265",Active,GST120174,vendor_2.pdf,TRUE,04-06-2026 16:34,15-04-2026 12:05
+3,Zara 3,victoriamedina@example.org,6740511335,"297 Campos Turnpike Suite 179 East Devinmouth, WI 42213",Active,GST433766,vendor_3.pdf,FALSE,06-04-2026 08:15,04-05-2026 20:12
+4,H&M 4,jamestrujillo@example.com,465409151,"5670 Tran Fields South Kathleenstad, SD 95460",Pending,GST283166,vendor_4.pdf,FALSE,13-04-2026 11:06,01-04-2026 01:43
+5,H&M 5,kyleflores@example.org,246719719,"615 Brian Rest Apt. 891 New Andrew, NE 40952",Inactive,GST851566,vendor_5.pdf,TRUE,03-05-2026 00:59,10-06-2026 09:53
+6,W 6,richardkeller@example.net,1920431933,"474 Makayla Fort West Reginaldborough, NE 56706",Active,GST572687,vendor_6.pdf,TRUE,11-02-2026 21:34,13-02-2026 06:15
+7,Pantaloons 7,zwhite@example.com,5844184459,"15068 Justin Underpass Cabreraside, MN 39161",Pending,GST291885,vendor_7.pdf,FALSE,13-03-2026 05:02,04-01-2026 13:38
+8,H&M 8,xaviervalentine@example.net,8974378228,"947 Freeman Passage Suite 606 East Carlafurt, NJ 45769",Pending,GST985005,vendor_8.pdf,FALSE,25-04-2026 06:05,11-04-2026 03:02
+9,Pantaloons 9,kjones@example.com,3627262367,"47640 George Viaduct Suite 628 Yolandabury, KS 11430",Pending,GST150294,vendor_9.pdf,TRUE,09-02-2026 01:39,04-03-2026 00:48
+10,Pantaloons 10,asmith@example.net,7869597165,"0671 Erica Trail Saramouth, SC 19086",Active,GST319397,vendor_10.pdf,TRUE,31-03-2026 21:46,16-03-2026 02:04
+11,Zara 11,chapmankatherine@example.com,7631726807,"34465 Jeffrey Shores Patrickchester, SD 87353",Inactive,GST813522,vendor_11.pdf,TRUE,01-05-2026 15:58,25-01-2026 19:56
+12,Allen Solly 12,khanson@example.net,3374239571,"5782 Sullivan Radial Leefort, GU 45745",Active,GST972060,vendor_12.pdf,FALSE,03-02-2026 16:45,28-03-2026 19:11
+13,Allen Solly 13,reyeslisa@example.com,6309312263,"0257 Abigail Camp Suite 576 Hebertbury, NE 82951",Pending,GST267677,vendor_13.pdf,TRUE,04-03-2026 12:11,25-02-2026 17:06
+14,Levis 14,justinwilliams@example.org,6405142668,"32055 Michael Junction Suite 766 Port Ronald, GU 90347",Active,GST460040,vendor_14.pdf,FALSE,22-03-2026 22:22,07-01-2026 12:57
+15,W 15,christina40@example.net,214928531,USCGC Hancock FPO AE 12417,Pending,GST624786,vendor_15.pdf,FALSE,18-03-2026 11:59,27-03-2026 08:21
+16,Biba 16,leonardkimberly@example.org,5831478330,"496 Smith Wall Suite 180 West Michaelmouth, MH 97116",Active,GST852968,vendor_16.pdf,FALSE,28-05-2026 04:22,05-05-2026 11:32
+17,Allen Solly 17,jacksontaylor@example.com,1907318957,"1703 Wheeler Stream South Scottfurt, OK 69881",Pending,GST593253,vendor_17.pdf,TRUE,05-03-2026 15:03,05-01-2026 04:49
+18,FabIndia 18,millsmichael@example.com,8910291363,"031 Reyes Vista Suite 409 Port Heather, CT 96302",Active,GST833410,vendor_18.pdf,FALSE,15-02-2026 23:48,09-04-2026 01:50
+19,Pantaloons 19,ericawilson@example.org,2230539329,"60340 Gary Ferry Apt. 338 Roseburgh, LA 90590",Inactive,GST720938,vendor_19.pdf,TRUE,01-02-2026 09:07,22-01-2026 17:49
+20,FabIndia 20,vickiemiller@example.com,2046182756,"58880 Holt Manors Kimside, AL 45911",Active,GST945467,vendor_20.pdf,TRUE,10-04-2026 23:12,06-01-2026 17:12
+21,FabIndia 21,thamilton@example.net,2294713550,"99438 Ashley Crossroad West Oliviamouth, ND 39507",Active,GST811499,vendor_21.pdf,FALSE,18-04-2026 10:44,05-02-2026 14:36
+22,Manyavar 22,shawn78@example.org,840716658,"5953 Alexander Rue Port Dianahaven, OH 53425",Inactive,GST325306,vendor_22.pdf,FALSE,14-01-2026 18:08,17-03-2026 00:31
+23,Allen Solly 23,fconner@example.com,3192208746,"58950 George Valleys Natashahaven, DE 34223",Active,GST652722,vendor_23.pdf,FALSE,16-05-2026 11:59,07-02-2026 08:07
+24,Max 24,heidibooth@example.net,5220342772,"549 Joshua Station Suite 306 Bryanside, TN 35818",Inactive,GST651326,vendor_24.pdf,TRUE,18-03-2026 21:21,15-02-2026 09:41
+25,W 25,michael91@example.com,8465056550,"154 Flores Prairie Mirandashire, FM 26170",Inactive,GST705753,vendor_25.pdf,FALSE,30-01-2026 21:59,09-06-2026 07:11
+26,Manyavar 26,eross@example.org,5890664203,Unit 3626 Box 8029 DPO AA 08486,Pending,GST456516,vendor_26.pdf,TRUE,02-02-2026 01:55,01-02-2026 09:54
+27,H&M 27,michael30@example.org,8912652789,"3635 Nolan Station Suite 851 Hillberg, OK 96768",Active,GST242082,vendor_27.pdf,FALSE,07-02-2026 23:42,27-01-2026 07:25
+28,FabIndia 28,anita89@example.com,7709100018,"730 Jones Cove Apt. 427 West Garyview, FM 94475",Active,GST162242,vendor_28.pdf,TRUE,06-03-2026 13:58,30-05-2026 09:20
+29,W 29,jacquelinecox@example.net,3107885859,"5231 Underwood Unions Jamesbury, IN 50596",Active,GST237220,vendor_29.pdf,TRUE,18-01-2026 09:22,15-01-2026 04:05
+30,H&M 30,jamiecruz@example.com,5234658439,"21590 Chambers Stream Apt. 357 Laurenbury, LA 33729",Pending,GST425932,vendor_30.pdf,FALSE,24-03-2026 22:37,06-03-2026 18:37
+31,Max 31,xstone@example.com,6674400407,"286 Barry Light North James, AS 11317",Inactive,GST516156,vendor_31.pdf,FALSE,02-04-2026 14:31,20-05-2026 08:12
+32,Levis 32,jgardner@example.org,2185321582,"759 Miller Oval New Ryan, NE 65667",Inactive,GST193616,vendor_32.pdf,FALSE,16-02-2026 05:09,29-05-2026 03:16
+33,Pantaloons 33,david50@example.net,4103466658,"8073 Strong Cove Zacharystad, OR 73158",Pending,GST841944,vendor_33.pdf,TRUE,28-01-2026 18:21,05-05-2026 10:02
+34,Levis 34,cbeard@example.com,1928899471,"76192 Christina Freeway New Josephborough, WY 16940",Inactive,GST803033,vendor_34.pdf,FALSE,18-05-2026 20:24,09-06-2026 12:07
+35,H&M 35,garciakimberly@example.com,2987518222,"63458 Davenport Crossroad Apt. 190 Osborneview, VA 52171",Inactive,GST120095,vendor_35.pdf,FALSE,01-05-2026 16:16,07-04-2026 12:10
+36,Manyavar 36,moraleslinda@example.org,5159801420,"8578 Michael Well Apt. 551 East Adammouth, VI 38444",Pending,GST469910,vendor_36.pdf,FALSE,01-04-2026 00:08,16-03-2026 02:27
+37,H&M 37,ian77@example.org,9603063821,"903 Nicole Cove Suite 730 Leonardville, OR 94474",Pending,GST414122,vendor_37.pdf,TRUE,09-06-2026 17:09,07-03-2026 19:15
+38,FabIndia 38,omccormick@example.org,9208909613,"7387 Jason Walks West Stephanieside, KY 43881",Inactive,GST446662,vendor_38.pdf,TRUE,16-01-2026 13:34,06-06-2026 00:26
+39,W 39,brendahardy@example.com,8662880336,"853 Saunders Causeway Suite 242 New Christopherfort, TN 65195",Inactive,GST757069,vendor_39.pdf,FALSE,06-01-2026 15:31,14-01-2026 22:26
+40,Pantaloons 40,davidsmith@example.net,9143665178,"009 Joseph Place Williamborough, MT 26236",Inactive,GST506147,vendor_40.pdf,TRUE,15-01-2026 15:55,17-02-2026 10:50
+41,H&M 41,pobrien@example.com,9535277108,"12986 Sonia Estate Lake Thomasmouth, MO 46019",Inactive,GST301744,vendor_41.pdf,FALSE,18-04-2026 17:02,14-03-2026 17:02
+42,Pantaloons 42,mitchelltanya@example.com,4970459107,"319 Yang Divide Esparzamouth, AS 54164",Pending,GST986898,vendor_42.pdf,TRUE,23-03-2026 02:55,27-05-2026 13:12
+43,W 43,brianware@example.net,3682388061,"28280 Ward Locks Apt. 472 South Susanfurt, PW 79992",Pending,GST945495,vendor_43.pdf,TRUE,23-03-2026 09:18,01-05-2026 18:20
+44,Levis 44,cassandraeaton@example.com,5141197661,"36564 Shannon Stravenue Suite 328 Christinaberg, ME 12190",Pending,GST938702,vendor_44.pdf,FALSE,04-03-2026 04:21,23-01-2026 09:00
+45,Levis 45,rwaller@example.net,7605089937,"697 Willie Turnpike Suite 336 East Julieview, IA 40033",Pending,GST374189,vendor_45.pdf,TRUE,24-01-2026 00:27,13-01-2026 10:51
+46,Manyavar 46,michaelcampbell@example.net,9939103740,"6816 Jones Meadows Lake Brandon, IA 21727",Inactive,GST420149,vendor_46.pdf,FALSE,26-04-2026 01:01,05-04-2026 19:15
+47,Biba 47,daniellereed@example.org,6221102590,"066 Miller Path Suite 505 Kaitlynview, GU 81013",Pending,GST970311,vendor_47.pdf,FALSE,16-03-2026 11:14,24-01-2026 16:14
+48,Pantaloons 48,brucewillis@example.net,5641645011,"28268 Roger Manors Suite 239 Lake Garyberg, LA 24788",Inactive,GST622821,vendor_48.pdf,TRUE,12-01-2026 16:19,28-03-2026 05:32
+49,Max 49,terrioneill@example.net,7722480743,"59434 Rodriguez Field Suite 174 South Aliciafort, AR 70892",Active,GST604460,vendor_49.pdf,FALSE,08-02-2026 06:21,09-01-2026 10:15
+50,Biba 50,larsonnichole@example.net,8241683087,Unit 8272 Box 8495 DPO AA 22573,Inactive,GST909993,vendor_50.pdf,TRUE,04-02-2026 01:03,16-02-2026 19:57
+51,Allen Solly 51,hhodges@example.org,1263134576,"0197 Gina Shore Parkerfurt, IN 21535",Pending,GST176450,vendor_51.pdf,FALSE,24-01-2026 05:54,09-02-2026 04:37
+52,W 52,katherine12@example.org,4039828473,"32766 Henderson Tunnel Suite 764 Bradbury, CA 35221",Active,GST685416,vendor_52.pdf,TRUE,14-03-2026 12:05,15-05-2026 23:40
+53,Max 53,padams@example.org,6633099317,"27350 Erica Tunnel South Jacob, SC 85743",Active,GST411176,vendor_53.pdf,FALSE,03-05-2026 19:21,05-05-2026 16:49
+54,Pantaloons 54,beverlywagner@example.net,6011759193,"9001 Stephen Ports Apt. 217 Elizabethbury, IA 11882",Active,GST493722,vendor_54.pdf,TRUE,22-05-2026 16:25,13-01-2026 23:18
+55,Zara 55,jimenezcaitlyn@example.com,9931468041,"38429 Smith Hill Richardberg, MI 85445",Inactive,GST131321,vendor_55.pdf,TRUE,08-04-2026 22:24,09-04-2026 01:13
+56,Zara 56,awilson@example.com,5070729886,"84448 Peters Meadow West Alicia, MH 77507",Active,GST363433,vendor_56.pdf,TRUE,25-02-2026 12:46,11-05-2026 20:20
+57,H&M 57,maureen00@example.com,7831815152,"0674 Jones Route Suzannemouth, NJ 93989",Pending,GST733058,vendor_57.pdf,TRUE,03-05-2026 03:37,06-02-2026 19:58
+58,Levis 58,vanessa80@example.com,4463484350,"6595 Robert Rapids Suite 470 Garciaside, NE 23889",Inactive,GST252149,vendor_58.pdf,FALSE,13-05-2026 23:29,22-04-2026 07:08
+59,H&M 59,joanna50@example.net,9973237970,"061 Greer Circles Lake Christopher, FM 07938",Active,GST642691,vendor_59.pdf,FALSE,10-06-2026 12:27,31-01-2026 03:13
+60,H&M 60,elopez@example.net,9931722164,"1327 Chavez Isle Apt. 864 South Alexander, TN 60816",Inactive,GST958645,vendor_60.pdf,FALSE,22-03-2026 00:45,14-01-2026 05:22
+61,Pantaloons 61,anthonyschmidt@example.com,7448061631,"156 Baker Gardens Apt. 218 Port Rebecca, WY 53487",Active,GST793160,vendor_61.pdf,TRUE,07-03-2026 10:31,10-05-2026 03:23
+62,Biba 62,phillip97@example.net,9661049548,"710 Tiffany Shores East Veronicaburgh, MO 52771",Pending,GST704239,vendor_62.pdf,TRUE,24-01-2026 04:04,20-05-2026 12:56
+63,Allen Solly 63,moonkaitlyn@example.com,7358822643,Unit 3764 Box 5409 DPO AA 16542,Pending,GST544054,vendor_63.pdf,FALSE,31-05-2026 16:15,25-03-2026 17:31
+64,Zara 64,markgonzalez@example.net,5413129347,"257 Jessica Plain Apt. 894 Walkerport, VI 24367",Inactive,GST251879,vendor_64.pdf,TRUE,14-05-2026 10:54,16-05-2026 18:27
+65,Allen Solly 65,julie74@example.org,8388100169,"2562 Bennett Ridge Port Brett, UT 51996",Active,GST447043,vendor_65.pdf,TRUE,04-01-2026 02:42,18-01-2026 16:54
+66,Manyavar 66,michael52@example.net,8800786978,"57544 Steele Neck Suite 234 Kramerhaven, NM 32706",Active,GST184047,vendor_66.pdf,FALSE,07-01-2026 17:19,19-02-2026 14:41
+67,H&M 67,mlove@example.org,7636809850,"97136 Tucker Canyon Frenchbury, AZ 62488",Inactive,GST788689,vendor_67.pdf,FALSE,28-04-2026 00:43,20-03-2026 22:25
+68,W 68,ryancline@example.org,4110350620,USNS Moreno FPO AE 17771,Pending,GST924405,vendor_68.pdf,FALSE,19-01-2026 06:16,07-01-2026 09:17
+69,Biba 69,christine10@example.org,5096029525,"21889 Bailey Locks Port Christopherborough, TN 89725",Pending,GST547972,vendor_69.pdf,FALSE,23-05-2026 21:04,10-02-2026 21:46
+70,Levis 70,david67@example.org,4329122438,"36593 Emma Falls Suite 549 West Jeremyberg, IA 75754",Inactive,GST375257,vendor_70.pdf,FALSE,06-01-2026 01:57,11-06-2026 04:07
+71,Zara 71,davidarroyo@example.net,1964463509,"7711 Melissa Ramp Suite 872 Mindyborough, GA 45699",Pending,GST280598,vendor_71.pdf,FALSE,05-06-2026 07:41,07-03-2026 04:32
+72,W 72,vincenthernandez@example.org,5949194148,"78407 Joseph Prairie Apt. 496 South Kyleland, UT 26349",Pending,GST820871,vendor_72.pdf,TRUE,07-01-2026 07:11,02-02-2026 18:34
+73,Manyavar 73,irobles@example.net,3562421444,"1072 Blake Plain East Austinmouth, NM 32791",Inactive,GST436541,vendor_73.pdf,TRUE,24-01-2026 07:26,14-03-2026 20:27
+74,Allen Solly 74,alexandriamullen@example.net,9023526975,USCGC Macdonald FPO AE 22917,Pending,GST594920,vendor_74.pdf,TRUE,21-05-2026 08:17,19-01-2026 22:38
+75,Zara 75,nichole12@example.com,6487582675,"510 Samantha Viaduct Suite 383 Tarastad, RI 20104",Pending,GST259355,vendor_75.pdf,FALSE,07-02-2026 14:20,22-04-2026 17:12
+76,Allen Solly 76,leroy18@example.org,5369487364,"52356 Dawn Drive East Michaeltown, NE 29999",Active,GST990234,vendor_76.pdf,TRUE,04-02-2026 02:25,15-05-2026 14:53
+77,Allen Solly 77,mmcdonald@example.com,5972382995,"945 Susan Greens North Amandatown, SD 98186",Inactive,GST522938,vendor_77.pdf,FALSE,06-01-2026 14:04,03-06-2026 23:13
+78,Max 78,kevin19@example.org,6560933571,"42829 Reilly Gardens South James, UT 34441",Pending,GST223692,vendor_78.pdf,TRUE,23-02-2026 09:02,04-06-2026 03:11
+79,FabIndia 79,christopherthompson@example.com,4259401680,"4885 Fisher Grove Suite 617 Richardbury, AS 32871",Pending,GST987985,vendor_79.pdf,TRUE,20-02-2026 07:18,20-05-2026 12:58
+80,Manyavar 80,robincummings@example.org,6058261953,"49297 Johnson Path Apt. 721 Johnhaven, WY 59809",Active,GST363008,vendor_80.pdf,FALSE,14-03-2026 22:06,06-01-2026 11:02
+81,Biba 81,rgonzalez@example.org,1662777977,"3862 Stephanie Radial Apt. 054 South Rogerview, CO 68329",Pending,GST173298,vendor_81.pdf,TRUE,26-04-2026 18:21,28-03-2026 00:41
+82,Max 82,cookmary@example.net,499681890,"816 Scott Brook Tammyport, MS 68746",Active,GST370787,vendor_82.pdf,TRUE,07-03-2026 08:27,01-03-2026 13:14
+83,Pantaloons 83,bryan01@example.org,9394197853,"1098 Lambert Neck Karenhaven, SC 92291",Pending,GST640360,vendor_83.pdf,TRUE,04-01-2026 16:38,21-04-2026 04:34
+84,Max 84,pdurham@example.org,6951858081,"73885 Sherman Hill Jonathanburgh, IA 03442",Pending,GST334871,vendor_84.pdf,TRUE,16-04-2026 18:21,13-01-2026 06:35
+85,Manyavar 85,adamwise@example.com,3657406659,"597 Mcmillan Extension Apt. 306 Josephchester, AZ 40282",Active,GST873178,vendor_85.pdf,FALSE,07-01-2026 13:59,05-01-2026 03:15
+86,W 86,valerierodriguez@example.net,6515238505,"5488 Marquez Extension Suite 953 South Emily, IA 33649",Active,GST696216,vendor_86.pdf,TRUE,12-01-2026 20:21,08-01-2026 16:32
+87,Max 87,carolynthompson@example.org,2903953345,"8496 Fields Forks Hoganton, GA 71545",Active,GST885722,vendor_87.pdf,FALSE,18-04-2026 06:17,24-03-2026 06:51
+88,W 88,linda69@example.org,26265051,"4165 Oconnell Isle Yangside, AK 96616",Active,GST608532,vendor_88.pdf,FALSE,28-02-2026 18:36,13-01-2026 16:26
+89,W 89,lcampbell@example.net,738948725,"85267 Preston Road Apt. 841 Wilsonshire, DE 72140",Active,GST488969,vendor_89.pdf,TRUE,05-01-2026 01:58,13-03-2026 06:31
+90,Levis 90,christinamccarty@example.net,7098743691,"8991 Diaz Cape Apt. 859 Kathrynton, WY 31863",Active,GST897778,vendor_90.pdf,FALSE,21-05-2026 21:43,15-03-2026 23:19
+91,H&M 91,simonmary@example.net,6642369327,"47704 Norris Dale North Christophershire, NE 41069",Active,GST913816,vendor_91.pdf,TRUE,23-01-2026 03:40,31-03-2026 05:53
+92,Biba 92,hillmichael@example.net,198399351,"74239 Cameron Parks Williamfort, ID 06926",Pending,GST828877,vendor_92.pdf,TRUE,04-05-2026 11:47,23-03-2026 06:13
+93,Pantaloons 93,michael42@example.org,9273368178,"91096 Green Park Suite 998 West Terrancechester, TN 36761",Inactive,GST402366,vendor_93.pdf,FALSE,31-01-2026 03:22,16-02-2026 10:00
+94,Zara 94,guerrerojustin@example.com,5172493422,"568 Luna Tunnel Lake Rhondafort, SD 73593",Inactive,GST654468,vendor_94.pdf,TRUE,21-01-2026 11:13,26-01-2026 08:00
+95,Levis 95,joseph25@example.org,4576093811,"846 Orr Wells East Johnhaven, TN 12577",Pending,GST423189,vendor_95.pdf,TRUE,20-02-2026 21:34,03-05-2026 18:41
+96,FabIndia 96,bsmith@example.org,7137729203,"592 Vargas Spurs Suite 120 South Crystal, PR 16630",Active,GST916668,vendor_96.pdf,TRUE,27-05-2026 13:20,04-06-2026 14:12
+97,Biba 97,kiddmichelle@example.org,8493205082,"7572 Colton Turnpike Suite 040 Campbellland, AS 76131",Inactive,GST113414,vendor_97.pdf,TRUE,21-04-2026 21:10,21-01-2026 16:09
+98,Manyavar 98,dbates@example.com,4828676435,"5093 Campbell Ridges Suite 937 Larsonmouth, NM 39536",Inactive,GST803352,vendor_98.pdf,FALSE,19-01-2026 17:20,05-03-2026 20:11
+99,Pantaloons 99,tjenkins@example.com,2835676377,"879 Browning Island Lake Micheal, MN 09785",Pending,GST322124,vendor_99.pdf,TRUE,02-02-2026 18:30,07-02-2026 08:48
+100,Levis 100,reevesthomas@example.net,4578656756,"735 Taylor Ports Carrollland, ME 05418",Inactive,GST655299,vendor_100.pdf,TRUE,01-04-2026 10:29,30-05-2026 04:25

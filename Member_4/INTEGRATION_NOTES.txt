@@ -1,0 +1,27 @@
+MEMBER 4: GARMENT DETECTION & VALIDATION API SPEC
+
+1. PRODUCT IMAGE VALIDATION ENDPOINT
+- Endpoint: POST /validate-image/
+- Payload: Multipart/form-data containing an image file (.png, .jpg, .jpeg, .webp)
+- Output Format (JSON):
+  {
+    "status": "Success",
+    "filename": "shirt.png",
+    "detected_objects_count": 1,
+    "validation_passed": true,
+    "remarks": "Image passed verification standards."
+  }
+
+2. ANALYTICS CSV INGESTION ENDPOINT
+- Endpoint: POST /upload-csv/
+- Payload: Multipart/form-data containing a CSV data file (.csv)
+- Output Format (JSON):
+  {
+    "status": "Analytics Synchronized",
+    "filename": "backend_data.csv",
+    "records_processed": 142,
+    "schema_columns": ["timestamp", "file_name", "garments_found", "validation_status"]
+  }
+
+3. CENTRALIZED TELEMETRY LEDGER
+- Location: dataset/garment_validation_analytics.csv

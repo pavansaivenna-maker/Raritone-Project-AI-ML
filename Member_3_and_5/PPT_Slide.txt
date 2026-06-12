@@ -1,0 +1,8 @@
+SLIDE TITLE: AI Foundation & Analytics Integration
+TEAM MEMBERS: Member 3 & Member 5
+
+BULLET POINTS:
+- Garment Processing Engine: Deployed U^2-Net architecture for zero-shot garment segmentation and high-precision background removal.
+- Data Normalization: Built an automated tensor-transformation pipeline to resize and normalize apparel datasets for downstream models.
+- Analytics Infrastructure: Engineered a high-speed FastAPI backend to track real-time try-on events, session durations, and cart conversion rates.
+- Performance Validation: Validated via automated scripts, achieving 100% endpoint uptime and seamless 200 OK cross-team API connectivity.

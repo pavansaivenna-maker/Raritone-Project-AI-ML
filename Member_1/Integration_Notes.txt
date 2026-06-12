@@ -1,0 +1,21 @@
+MEMBER 1: AI PRODUCT ASSISTANT API SPEC
+
+INPUT FORMAT:
+- Endpoint: POST /generate-metadata/
+- Content-Type: application/json
+- Payload structure:
+  {
+    "apparel_type": "string",
+    "primary_color": "string",
+    "target_gender": "string"
+  }
+
+OUTPUT FORMAT (JSON):
+{
+  "status": "Success",
+  "timestamp": "YYYY-MM-DD HH:MM:SS",
+  "generated_title": "string",
+  "generated_description": "string",
+  "seo_keywords": "string",
+  "product_tags": ["array", "of", "strings"]
+}

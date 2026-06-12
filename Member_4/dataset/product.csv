@@ -1,0 +1,101 @@
+id,name,description,price,stock,category_id,variant,image_url,brand,sku,status,stock_alert,created_at,updated_at
+1,Kurti 1,Premium Kurti,3225,462,9,M,https://images.com/product1.jpg,Manyavar,SKU0001,Active,TRUE,05-01-2026 18:57,05-03-2026 07:21
+2,Saree 2,Premium Saree,3143,407,8,S,https://images.com/product2.jpg,FabIndia,SKU0002,Active,TRUE,20-01-2026 17:19,28-04-2026 05:04
+3,Jacket 3,Premium Jacket,1636,398,5,M,https://images.com/product3.jpg,H&M,SKU0003,Active,TRUE,01-05-2026 09:29,14-04-2026 18:41
+4,Jacket 4,Premium Jacket,3575,146,2,XL,https://images.com/product4.jpg,Pantaloons,SKU0004,Active,TRUE,02-06-2026 16:19,18-04-2026 18:33
+5,Shirt 5,Premium Shirt,3892,179,3,L,https://images.com/product5.jpg,H&M,SKU0005,Active,FALSE,01-03-2026 11:18,15-04-2026 05:13
+6,Dress 6,Premium Dress,3313,230,10,S,https://images.com/product6.jpg,W,SKU0006,Active,TRUE,10-02-2026 16:01,12-05-2026 16:51
+7,Kurti 7,Premium Kurti,3214,341,4,L,https://images.com/product7.jpg,Biba,SKU0007,Active,TRUE,02-05-2026 17:05,25-03-2026 08:37
+8,Hoodie 8,Premium Hoodie,1412,201,10,S,https://images.com/product8.jpg,Allen Solly,SKU0008,Active,TRUE,31-05-2026 07:59,24-03-2026 16:23
+9,Kurti 9,Premium Kurti,842,113,9,L,https://images.com/product9.jpg,Pantaloons,SKU0009,Active,TRUE,20-04-2026 00:37,08-06-2026 19:56
+10,Hoodie 10,Premium Hoodie,1624,451,10,L,https://images.com/product10.jpg,FabIndia,SKU0010,Active,TRUE,09-04-2026 14:23,21-01-2026 15:50
+11,Shirt 11,Premium Shirt,2585,19,8,M,https://images.com/product11.jpg,W,SKU0011,Active,FALSE,10-04-2026 09:38,07-06-2026 07:36
+12,T-Shirt 12,Premium T-Shirt,4478,472,2,M,https://images.com/product12.jpg,FabIndia,SKU0012,Active,FALSE,16-01-2026 18:36,19-03-2026 09:29
+13,T-Shirt 13,Premium T-Shirt,846,224,6,XL,https://images.com/product13.jpg,Manyavar,SKU0013,Active,TRUE,19-04-2026 11:49,02-03-2026 11:15
+14,Hoodie 14,Premium Hoodie,3825,21,1,L,https://images.com/product14.jpg,FabIndia,SKU0014,Active,TRUE,03-02-2026 15:30,17-03-2026 10:21
+15,T-Shirt 15,Premium T-Shirt,1941,111,8,L,https://images.com/product15.jpg,Manyavar,SKU0015,Active,FALSE,14-03-2026 03:38,20-04-2026 03:34
+16,Jacket 16,Premium Jacket,3822,459,4,M,https://images.com/product16.jpg,Allen Solly,SKU0016,Active,TRUE,02-06-2026 03:52,01-01-2026 16:47
+17,Hoodie 17,Premium Hoodie,3486,13,8,S,https://images.com/product17.jpg,Levis,SKU0017,Active,FALSE,11-02-2026 23:11,08-03-2026 19:02
+18,Dress 18,Premium Dress,1189,471,3,S,https://images.com/product18.jpg,Manyavar,SKU0018,Active,TRUE,02-01-2026 17:31,05-02-2026 17:54
+19,Saree 19,Premium Saree,4398,142,5,L,https://images.com/product19.jpg,Pantaloons,SKU0019,Active,FALSE,20-01-2026 08:01,10-06-2026 19:43
+20,Hoodie 20,Premium Hoodie,3781,190,8,M,https://images.com/product20.jpg,Allen Solly,SKU0020,Active,TRUE,06-04-2026 14:36,21-01-2026 07:20
+21,Dress 21,Premium Dress,3508,83,5,M,https://images.com/product21.jpg,Levis,SKU0021,Active,FALSE,16-05-2026 02:52,10-01-2026 08:47
+22,Kurti 22,Premium Kurti,2158,320,5,S,https://images.com/product22.jpg,FabIndia,SKU0022,Active,TRUE,12-04-2026 17:00,04-02-2026 02:30
+23,Saree 23,Premium Saree,3142,175,4,M,https://images.com/product23.jpg,Levis,SKU0023,Active,FALSE,05-01-2026 17:41,22-04-2026 07:23
+24,Jeans 24,Premium Jeans,3992,269,6,S,https://images.com/product24.jpg,Biba,SKU0024,Active,FALSE,22-04-2026 15:37,02-01-2026 14:44
+25,T-Shirt 25,Premium T-Shirt,543,209,2,S,https://images.com/product25.jpg,Allen Solly,SKU0025,Active,FALSE,07-05-2026 22:23,20-03-2026 00:39
+26,Jeans 26,Premium Jeans,966,439,10,S,https://images.com/product26.jpg,Levis,SKU0026,Active,TRUE,20-04-2026 20:11,17-02-2026 16:53
+27,Saree 27,Premium Saree,790,212,6,XL,https://images.com/product27.jpg,Levis,SKU0027,Active,TRUE,20-03-2026 03:06,18-04-2026 19:23
+28,Hoodie 28,Premium Hoodie,657,148,7,S,https://images.com/product28.jpg,Max,SKU0028,Active,FALSE,26-03-2026 14:15,02-05-2026 00:53
+29,Kurti 29,Premium Kurti,4688,155,1,M,https://images.com/product29.jpg,Pantaloons,SKU0029,Active,FALSE,29-03-2026 07:15,18-04-2026 11:30
+30,Saree 30,Premium Saree,2419,386,7,S,https://images.com/product30.jpg,Biba,SKU0030,Active,FALSE,27-05-2026 13:14,06-05-2026 11:08
+31,Jeans 31,Premium Jeans,2863,287,2,S,https://images.com/product31.jpg,FabIndia,SKU0031,Active,FALSE,20-02-2026 12:44,08-05-2026 18:31
+32,Shirt 32,Premium Shirt,4710,184,9,XL,https://images.com/product32.jpg,Manyavar,SKU0032,Active,FALSE,10-05-2026 19:50,15-01-2026 12:15
+33,Hoodie 33,Premium Hoodie,2412,314,7,L,https://images.com/product33.jpg,Levis,SKU0033,Active,FALSE,22-03-2026 02:23,04-02-2026 16:30
+34,Shirt 34,Premium Shirt,2854,286,9,XL,https://images.com/product34.jpg,Pantaloons,SKU0034,Active,FALSE,07-05-2026 12:15,23-05-2026 13:52
+35,Saree 35,Premium Saree,4303,303,6,S,https://images.com/product35.jpg,Levis,SKU0035,Active,FALSE,19-05-2026 12:56,02-06-2026 00:07
+36,Dress 36,Premium Dress,4831,13,5,S,https://images.com/product36.jpg,W,SKU0036,Active,FALSE,27-04-2026 06:39,03-02-2026 12:07
+37,Kurti 37,Premium Kurti,3321,214,1,M,https://images.com/product37.jpg,Zara,SKU0037,Active,FALSE,12-01-2026 12:04,30-05-2026 06:30
+38,Jacket 38,Premium Jacket,820,341,10,XL,https://images.com/product38.jpg,Pantaloons,SKU0038,Active,TRUE,09-01-2026 14:33,11-02-2026 04:24
+39,Dress 39,Premium Dress,3974,457,10,M,https://images.com/product39.jpg,Biba,SKU0039,Active,TRUE,21-03-2026 23:39,24-05-2026 18:23
+40,Hoodie 40,Premium Hoodie,3645,32,10,XL,https://images.com/product40.jpg,Zara,SKU0040,Active,FALSE,07-01-2026 11:50,02-01-2026 02:19
+41,Jacket 41,Premium Jacket,2559,466,6,M,https://images.com/product41.jpg,Levis,SKU0041,Active,FALSE,24-03-2026 11:48,06-06-2026 03:36
+42,Kurti 42,Premium Kurti,2235,165,10,XL,https://images.com/product42.jpg,Biba,SKU0042,Active,TRUE,01-06-2026 11:49,12-01-2026 01:59
+43,Saree 43,Premium Saree,3475,54,6,XL,https://images.com/product43.jpg,Levis,SKU0043,Active,TRUE,09-06-2026 23:03,21-03-2026 16:06
+44,Shirt 44,Premium Shirt,559,27,6,L,https://images.com/product44.jpg,Levis,SKU0044,Active,FALSE,12-03-2026 04:40,20-05-2026 15:19
+45,Jacket 45,Premium Jacket,1338,237,1,S,https://images.com/product45.jpg,W,SKU0045,Active,FALSE,08-05-2026 20:22,17-03-2026 17:37
+46,T-Shirt 46,Premium T-Shirt,4904,499,4,XL,https://images.com/product46.jpg,Biba,SKU0046,Active,FALSE,12-01-2026 12:59,18-03-2026 22:42
+47,Kurti 47,Premium Kurti,4148,29,9,L,https://images.com/product47.jpg,Manyavar,SKU0047,Active,FALSE,02-05-2026 18:15,17-01-2026 06:09
+48,Saree 48,Premium Saree,1788,186,1,S,https://images.com/product48.jpg,H&M,SKU0048,Active,FALSE,09-01-2026 14:26,23-02-2026 17:29
+49,Jacket 49,Premium Jacket,4849,175,7,S,https://images.com/product49.jpg,Pantaloons,SKU0049,Active,FALSE,12-02-2026 16:51,12-03-2026 12:01
+50,Shirt 50,Premium Shirt,1631,204,2,M,https://images.com/product50.jpg,Manyavar,SKU0050,Active,FALSE,12-01-2026 13:29,15-03-2026 23:50
+51,Shirt 51,Premium Shirt,3464,18,1,XL,https://images.com/product51.jpg,Zara,SKU0051,Active,FALSE,19-01-2026 10:34,28-01-2026 18:58
+52,Jeans 52,Premium Jeans,2581,343,8,L,https://images.com/product52.jpg,Max,SKU0052,Active,FALSE,30-03-2026 06:18,22-04-2026 17:39
+53,Jacket 53,Premium Jacket,1002,429,4,XL,https://images.com/product53.jpg,Max,SKU0053,Active,TRUE,15-03-2026 09:51,21-05-2026 15:35
+54,Dress 54,Premium Dress,786,66,7,XL,https://images.com/product54.jpg,Manyavar,SKU0054,Active,TRUE,30-01-2026 20:36,24-02-2026 23:43
+55,Shirt 55,Premium Shirt,2161,167,2,L,https://images.com/product55.jpg,W,SKU0055,Active,FALSE,28-01-2026 18:14,29-01-2026 19:41
+56,Jeans 56,Premium Jeans,517,157,8,L,https://images.com/product56.jpg,Zara,SKU0056,Active,FALSE,25-05-2026 21:05,20-04-2026 19:48
+57,Shirt 57,Premium Shirt,1955,347,10,XL,https://images.com/product57.jpg,Allen Solly,SKU0057,Active,TRUE,30-04-2026 19:47,11-03-2026 03:08
+58,Saree 58,Premium Saree,1504,469,2,S,https://images.com/product58.jpg,Zara,SKU0058,Active,TRUE,13-05-2026 00:49,16-05-2026 17:55
+59,Hoodie 59,Premium Hoodie,1973,173,3,XL,https://images.com/product59.jpg,Pantaloons,SKU0059,Active,TRUE,06-02-2026 01:45,28-04-2026 03:17
+60,Jeans 60,Premium Jeans,4750,74,9,S,https://images.com/product60.jpg,FabIndia,SKU0060,Active,TRUE,12-01-2026 01:56,15-02-2026 20:15
+61,Dress 61,Premium Dress,4079,127,6,M,https://images.com/product61.jpg,W,SKU0061,Active,TRUE,22-05-2026 23:39,24-05-2026 22:51
+62,T-Shirt 62,Premium T-Shirt,3607,442,2,S,https://images.com/product62.jpg,H&M,SKU0062,Active,TRUE,22-03-2026 14:26,15-03-2026 14:48
+63,Hoodie 63,Premium Hoodie,1426,247,5,L,https://images.com/product63.jpg,Max,SKU0063,Active,FALSE,28-04-2026 04:35,20-05-2026 22:54
+64,Dress 64,Premium Dress,1970,392,10,M,https://images.com/product64.jpg,Levis,SKU0064,Active,TRUE,12-05-2026 08:24,22-03-2026 14:36
+65,T-Shirt 65,Premium T-Shirt,4257,435,3,XL,https://images.com/product65.jpg,H&M,SKU0065,Active,FALSE,07-03-2026 03:57,12-05-2026 02:43
+66,T-Shirt 66,Premium T-Shirt,1210,270,8,XL,https://images.com/product66.jpg,Max,SKU0066,Active,FALSE,09-02-2026 19:05,28-04-2026 03:29
+67,Hoodie 67,Premium Hoodie,1436,406,1,L,https://images.com/product67.jpg,Manyavar,SKU0067,Active,FALSE,13-04-2026 21:26,30-01-2026 02:00
+68,Hoodie 68,Premium Hoodie,3804,418,1,M,https://images.com/product68.jpg,Pantaloons,SKU0068,Active,FALSE,10-05-2026 12:52,11-02-2026 09:25
+69,Jacket 69,Premium Jacket,2397,61,2,XL,https://images.com/product69.jpg,Biba,SKU0069,Active,TRUE,28-05-2026 20:50,15-05-2026 18:41
+70,Jeans 70,Premium Jeans,4232,456,9,XL,https://images.com/product70.jpg,Levis,SKU0070,Active,FALSE,29-04-2026 03:29,23-02-2026 18:42
+71,Dress 71,Premium Dress,2322,182,9,S,https://images.com/product71.jpg,Allen Solly,SKU0071,Active,TRUE,29-03-2026 00:09,02-02-2026 03:56
+72,T-Shirt 72,Premium T-Shirt,622,99,10,L,https://images.com/product72.jpg,W,SKU0072,Active,TRUE,02-06-2026 12:36,24-05-2026 14:43
+73,Jeans 73,Premium Jeans,2726,145,3,L,https://images.com/product73.jpg,Pantaloons,SKU0073,Active,TRUE,08-05-2026 00:24,27-02-2026 07:31
+74,Saree 74,Premium Saree,1796,376,2,S,https://images.com/product74.jpg,Max,SKU0074,Active,TRUE,05-06-2026 00:00,07-02-2026 05:43
+75,T-Shirt 75,Premium T-Shirt,4343,277,7,M,https://images.com/product75.jpg,H&M,SKU0075,Active,FALSE,25-03-2026 18:09,03-06-2026 10:01
+76,Saree 76,Premium Saree,4993,456,10,XL,https://images.com/product76.jpg,Biba,SKU0076,Active,TRUE,01-03-2026 15:37,08-01-2026 18:41
+77,Kurti 77,Premium Kurti,729,211,1,M,https://images.com/product77.jpg,Zara,SKU0077,Active,FALSE,21-03-2026 14:18,09-06-2026 03:05
+78,Jacket 78,Premium Jacket,3395,44,5,XL,https://images.com/product78.jpg,H&M,SKU0078,Active,FALSE,08-05-2026 23:37,20-02-2026 05:31
+79,Saree 79,Premium Saree,1764,44,4,M,https://images.com/product79.jpg,Manyavar,SKU0079,Active,TRUE,31-01-2026 17:14,01-06-2026 20:39
+80,T-Shirt 80,Premium T-Shirt,4542,145,6,L,https://images.com/product80.jpg,Zara,SKU0080,Active,FALSE,30-05-2026 16:43,08-02-2026 20:32
+81,Jacket 81,Premium Jacket,1554,481,4,S,https://images.com/product81.jpg,Allen Solly,SKU0081,Active,FALSE,05-04-2026 22:23,14-05-2026 08:39
+82,Hoodie 82,Premium Hoodie,998,201,2,S,https://images.com/product82.jpg,H&M,SKU0082,Active,FALSE,08-04-2026 16:08,30-05-2026 07:12
+83,Jeans 83,Premium Jeans,1009,45,6,L,https://images.com/product83.jpg,H&M,SKU0083,Active,TRUE,30-01-2026 12:07,11-03-2026 16:22
+84,T-Shirt 84,Premium T-Shirt,2045,151,8,S,https://images.com/product84.jpg,Zara,SKU0084,Active,FALSE,18-04-2026 10:36,18-04-2026 06:58
+85,Saree 85,Premium Saree,4065,193,1,S,https://images.com/product85.jpg,Allen Solly,SKU0085,Active,FALSE,09-02-2026 05:55,06-03-2026 15:27
+86,T-Shirt 86,Premium T-Shirt,1171,414,1,M,https://images.com/product86.jpg,Levis,SKU0086,Active,TRUE,20-05-2026 06:35,19-02-2026 15:35
+87,Hoodie 87,Premium Hoodie,1063,81,7,M,https://images.com/product87.jpg,Zara,SKU0087,Active,TRUE,24-02-2026 08:20,13-05-2026 10:35
+88,Kurti 88,Premium Kurti,1085,335,2,L,https://images.com/product88.jpg,H&M,SKU0088,Active,FALSE,18-04-2026 22:54,07-06-2026 08:53
+89,Jacket 89,Premium Jacket,1602,279,1,M,https://images.com/product89.jpg,Manyavar,SKU0089,Active,TRUE,16-01-2026 17:39,21-05-2026 03:25
+90,Kurti 90,Premium Kurti,3910,196,5,M,https://images.com/product90.jpg,Max,SKU0090,Active,TRUE,16-03-2026 20:55,14-02-2026 09:29
+91,Jacket 91,Premium Jacket,935,319,6,L,https://images.com/product91.jpg,W,SKU0091,Active,FALSE,21-01-2026 22:28,31-03-2026 09:24
+92,Jeans 92,Premium Jeans,2364,417,5,S,https://images.com/product92.jpg,Levis,SKU0092,Active,TRUE,09-02-2026 10:45,06-01-2026 21:25
+93,Dress 93,Premium Dress,2028,380,4,S,https://images.com/product93.jpg,Allen Solly,SKU0093,Active,FALSE,18-04-2026 10:19,18-05-2026 23:00
+94,Jeans 94,Premium Jeans,927,78,10,M,https://images.com/product94.jpg,Pantaloons,SKU0094,Active,FALSE,19-05-2026 03:47,12-01-2026 07:30
+95,Jeans 95,Premium Jeans,891,495,6,XL,https://images.com/product95.jpg,Allen Solly,SKU0095,Active,FALSE,27-02-2026 11:18,22-02-2026 18:45
+96,Shirt 96,Premium Shirt,3157,214,7,S,https://images.com/product96.jpg,Pantaloons,SKU0096,Active,FALSE,20-02-2026 13:59,10-03-2026 21:52
+97,Dress 97,Premium Dress,3908,187,7,XL,https://images.com/product97.jpg,Pantaloons,SKU0097,Active,FALSE,04-05-2026 04:53,16-02-2026 11:23
+98,Kurti 98,Premium Kurti,3902,273,7,L,https://images.com/product98.jpg,W,SKU0098,Active,TRUE,17-03-2026 15:26,27-04-2026 19:06
+99,Shirt 99,Premium Shirt,4615,160,7,L,https://images.com/product99.jpg,Pantaloons,SKU0099,Active,TRUE,03-04-2026 18:15,26-02-2026 09:25
+100,Jacket 100,Premium Jacket,2660,274,3,L,https://images.com/product100.jpg,Zara,SKU0100,Active,FALSE,12-02-2026 23:36,09-03-2026 00:26
