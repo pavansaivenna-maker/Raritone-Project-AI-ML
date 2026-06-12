@@ -1,0 +1,13 @@
+# Model Details
+
+Demand Forecasting:
+- Random Forest Regressor
+
+Size Recommendation:
+- Classification Model
+
+Trend Forecasting:
+- Time Series Analysis
+
+Image Generation:
+- FLUX.1-dev Model
